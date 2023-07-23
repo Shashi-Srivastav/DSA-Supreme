@@ -139,4 +139,29 @@ int main()
         }
         cout<<endl;
     }
+    cout << "\nPattern 9 Holo Inverted Half Pyramid-----------------------------------------------\n\n";
+    //Pattern 9
+    // *****
+    // *  * 
+    // * *
+    // **
+    // *
+    for(int row = 0;row<5;row++){
+        for(int col = 0;col<5;col++ ){
+            if(row == 0 || col == 0 || col == 5-row-1){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    cout << "\nPattern 10 Full Pyramid-----------------------------------------------\n\n";
+    //Pattern 10
+    for(int i = 0;i<6;i++){
+        for(int j =0;j<11;j++){
+            if()
+        }
+    }
 }
