@@ -56,8 +56,21 @@ int findevenodd (int n){
 }
 // Problem find factorial of the number -------------------------------------------------------------------------
 int findfactorial(int n){
-    int numinator = n;
-    
+    int fact = 1;
+    for(int i=2;i<n;i++){
+        fact = fact*i;
+    }
+    return fact;
+}
+
+// Problem check given no is prime or not -------------------------------------------------------------------------
+int isprime(int n){
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
 }
 int main()
 {
@@ -67,4 +80,8 @@ int main()
     // cout<<sumofnoupton(10);
     // cout<<areaofcircle(5);
     // findevenodd(3);
+    int factorial = findfactorial(5);
+    cout<<factorial;
+    // cout<<isprime(7);
+
 }
