@@ -64,7 +64,7 @@ int findfactorial(int n){
 }
 
 // Problem check given no is prime or not -------------------------------------------------------------------------
-int isprime(int n){
+bool isprime(int n){
     for(int i=2;i<n;i++){
         if(n%i==0){
             return false;
@@ -80,8 +80,7 @@ int main()
     // cout<<sumofnoupton(10);
     // cout<<areaofcircle(5);
     // findevenodd(3);
-    int factorial = findfactorial(5);
-    cout<<factorial;
-    // cout<<isprime(7);
-
+    // int factorial = findfactorial(5);
+    // cout<<factorial;
+    // cout<<isprime(4);
 }
