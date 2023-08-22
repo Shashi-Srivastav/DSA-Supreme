@@ -90,7 +90,7 @@ int main()
 
     // }
 
-    // Triplete Pair
+    // Triplete Pair-----------------------------------------------------
 
     // vector<int> arr{10, 20, 30, 10, 40, 60, 45, 55, 60};
     // int sum = 100;
@@ -107,4 +107,31 @@ int main()
     //         }
     //     }
     // }
+
+
+    //Sort 0 & 1 / Dutch National Flag Problem ----------------------------------
+
+    vector<int> arr{1,0,0,1,0,1,0,1,1,0,1,0,1,0,1};
+    int start = 0;
+    int end = arr.size() - 1;
+    int i = 0;
+
+    while (i != end)
+    {
+        if(arr[i] == 0){
+            swap(arr[start], arr[i]);
+            i++;
+            start++;
+        }
+    else{
+        swap(arr[i],arr[end]);
+        end--;
+    }
+        
+    }
+    
+    for(auto value : arr){
+        cout<<value<<" ";
+    }
+
 }
