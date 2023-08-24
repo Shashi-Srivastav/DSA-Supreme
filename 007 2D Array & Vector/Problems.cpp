@@ -69,6 +69,30 @@ int findMinMax(int arr[][3], int row, int col)
     cout << "Max : " << max << endl;
 }
 
+    void waveVector(vector<vector<int> >arr){
+        int m = arr.size();
+        int n = arr[0].size();
+        for (int i = 0; i < n; i++)
+        {
+            //even no of col - top to bottom
+            if(( i & 1)==0){
+                for (int j = 0; j < m; j++)
+                {
+                    cout<<arr[j][i]<<" ";
+                }
+            }
+            else{
+                // odd no of co. - bottom to top 
+                for (int k = m-1;k>=0; k--)
+                {
+                    cout<<arr[k][i]<<" ";
+                }
+                
+            }
+        }
+        
+    }
+
 int main()
 {
 
@@ -199,5 +223,17 @@ int main()
     // vector<vector<int> > arr(5, vector<int>(5, -8));
     //cin>>[4][3];
     //cout<<[3][3];
+
+    //Wave Print a Matrix-----------------------------------------------------------------------------------------
+
+    vector<vector<int> >arr{
+        {1,2,3},
+        {4,5,6},
+        {7,8,9},
+        {10,11,12}
+    };
+    waveVector(arr);
+    
+    
 
 }
