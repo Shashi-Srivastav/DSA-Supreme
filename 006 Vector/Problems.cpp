@@ -33,33 +33,31 @@ int main()
 
     // Prob 2 Move -ve no to one side -----------------------------------------------------------
 
-    vector<int> arr{-1, 1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -6, 7, -7, 8, -8, 9, -9};
-    int start = 0;
-    int end = arr.size() - 1;
-    int ind = 0;
+    // vector<int> arr{-1, 1, 2, -2, 3, -3, 4, -4, 5, -5, 6, -6, 7, -7, 8, -8, 9, -9};
+    // int start = 0;
+    // int end = arr.size() - 1;
+    // int ind = 0;
 
-    while (end>start)
-    {
-        if (arr[ind] < 0)
-        {
-            start++;
-            ind++;
-        }
-        else
-        {
-            swap(arr[start], arr[end]);
-            end--;
-        }
-    }
+    // while (end>start)
+    // {
+    //     if (arr[ind] < 0)
+    //     {
+    //         start++;
+    //         ind++;
+    //     }
+    //     else
+    //     {
+    //         swap(arr[start], arr[end]);
+    //         end--;
+    //     }
+    // }
 
-    // Printing arr ---------
+    // // Printing arr ---------
 
-    for (auto v : arr)
-    {
-        cout << v << " ";
-    }
+    // for (auto v : arr)
+    // {
+    //     cout << v << " ";
+    // }
 
-    // Prob 3 find duplicate element ---------------------------------------------------------
 
-    // vector<int>arr{1,2,3,1,9,4,8,6,3,1,4,7,7,3};
 }
