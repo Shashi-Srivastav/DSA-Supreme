@@ -82,6 +82,30 @@ int findSqrt(int n){
     return ans;
 }
 
+bool binarySearchin2DArr(int arr[][5], int row, int col, int target){
+    int s = 0;
+    int e = row*col-1;
+    int mid = s + (e - s)/2;
+
+    while (s<=e){
+    int rowIndex = mid/col;
+    int colIndex = mid/col;
+
+    if (arr[rowIndex][colIndex] == target)
+    {
+        return true;
+    }
+    if (arr[rowIndex][colIndex] < target)
+    {
+        s = mid+1;
+    }
+    else{
+        e = mid -1;
+    }
+    mid = s + (e-s)/2;
+    }
+    return false;
+}
 
 int main()
 {
@@ -98,8 +122,26 @@ int main()
 
     //Prob  Find Sqrt of no. ---------------------------------------------------------------------------------------------
 
-    int n;
-    cin>>n;
-    int ans  = findSqrt(n);
-    cout<<"Sqrt of "<<n<<" is "<<ans;
+//     int n;
+//     cin>>n;
+//     int ans  = findSqrt(n);
+//     cout<<"Sqrt of "<<n<<" is "<<ans;
+
+//     Find element index of 2d arr using binary search -------------------------------------------------------------------
+    int arr[4][5] = {{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}};
+    int row = 4;
+    int col = 5;
+    int target = 19;
+    bool ans = binarySearchin2DArr(arr,row,col,target);
+
+    if (ans)
+    {
+        cout<<"Found";
+    }
+    else{
+        cout<<"Not Found";
+    }
+        
+    
+
 }
