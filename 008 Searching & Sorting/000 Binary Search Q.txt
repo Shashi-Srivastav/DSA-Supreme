@@ -1,0 +1,20 @@
+Only 3 Types of Q ask is MNC / Exist
+
+Type 1 - Classic Q
+    BinarySearch
+    Lower Bound Finding
+    Upper Bound Finding
+    Total Occurance
+    Pivot Element
+    Search in Rotated Sorted array
+    Sqrt
+
+Type 2 - Find in Search Space / Range Q - Ans Lie in Range / Predicate Function
+    Painter Partition
+    Aggresive Cow
+    Eco Spaug
+    Paratha Spaug
+    Book Allocation
+
+Type 3 - Index Observation 
+    
