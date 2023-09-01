@@ -171,9 +171,19 @@ int main()
     //Find Pivot Element in Roated Sorted Array with no. Duplicate Element---------------------------------------------------
 
     //Pivot = Max element in ann Array
-    vector<int>arr{2,3,4,5,6,7,8,9,10,1};
-    int ans = findPivortElement(arr);
-    cout<<"Pivot element foind ar index "<<ans;
+    // vector<int>arr{2,3,4,5,6,7,8,9,10,1};
+    // int ans = findPivortElement(arr);
+    // cout<<"Pivot element foind ar index "<<ans;
+
+    //Exponential Search -----------------------------------------------------------------------------------
+    //doubling search
+    //Glapping Search
+    //Strazilc Search
+
+    //Only Apply on Sorted Array --------
+
+    
+
 
 
 }
