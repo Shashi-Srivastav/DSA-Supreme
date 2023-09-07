@@ -1,5 +1,7 @@
 #include<iostream>
+#include<vector>
 #include<string>
+#include<algorithm>
 using namespace std;\
 
     bool compairString(string a, string b){
@@ -14,6 +16,14 @@ using namespace std;\
             
         }
         return true;
+    }
+
+    bool comp(char x, char y){
+        return x>y;
+    }
+
+    bool comparatior(int x , int y){
+        return y<x;
     }
 
 int main(){
@@ -59,11 +69,35 @@ int main(){
     // }
 
     //replace function ---------------------------------------@pass by ref
-    string p = "this is my name";
-    string q = "shashi";//or
+    // string p = "this is my name";
+    // string q = "shashi";//or
 
     //cout<<p.replace(0,4,q);//(starting index, till how many index, what to write here!)
-    cout<<p.replace(0,4,"it can be max")<<endl;
-    p.erase(0,18);//(kha se suru krna hai, kha khatam as index);
-    cout<<p<<endl;
+    // cout<<p.replace(0,4,"it can be max")<<endl;
+    // p.erase(0,18);//(kha se suru krna hai, kha khatam as index);
+    // cout<<p<<endl;
+
+    //lexi=icographic order - a,b,c,d,e,f..
+    // string s = "shashi";
+    // sort(s.begin(),s.end());
+    // cout<<s<<endl;//ahhiss
+    //Custom Compairot ------------------------------
+    // sort(s.begin(),s.end(),comp);
+    // cout<<s<<endl;//ssihha
+
+    //eg - 2
+    vector<int>arr{5,4,2,3,1};
+    // sort(arr.begin(),arr.end());//1 2 3 4 5 
+    sort(arr.begin(),arr.end(),comparatior);// 5 4 3 2 1
+    for(auto i: arr){
+        cout<<i<<" ";
+    }
+
+    //custom compatatior ----
+    vector<string>str{"love","shashi","goa","pune"};
+    //custom sort
+    //lexioxalgraphic sort with compartator
+    //sum of characrt sort
+    //first char lexi.. sort
+    // diff diff custom logic in custom comatatior
 }
