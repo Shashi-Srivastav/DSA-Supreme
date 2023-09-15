@@ -1,12 +1,27 @@
 #include <iostream>
 using namespace std;
-    void solve(int arr[]){
-        cout<<"Size of arr inside solve fx "<<sizeof(arr)<<endl;
-    }
-    void update(int *p){
-        cout<< "address stored inside p is : "<<p<<endl;//address stored inside p is : 0x62febc
-        cout<<"Address of p is : "<<&p<<endl; //Address of p is : 0x62fea0
-    }
+void solve(int arr[])
+{
+    cout << "Size of arr inside solve fx " << sizeof(arr) << endl;
+}
+void update(int *p)
+{
+    cout << "address stored inside p is : " << p << endl; // address stored inside p is : 0x62febc
+    cout << "Address of p is : " << &p << endl;           // Address of p is : 0x62fea0
+}
+void util(int *p)
+{
+    //p = p + 1;//change in copy @ pass by value
+    *p = *p + 1;//pass by ref as pointer a = 6 now;
+}
+void solvee(int**p){
+   // p = p+1;//12 - change in copy
+   // *p = *p+1;//change in **p value - acc to +1 address from its value
+    **p = **p+1;//12 - 12+1 - 13
+}
+void solveee(int*& p){
+    p = p+1;
+}
 int main()
 {
     // int a = 5;
@@ -93,7 +108,7 @@ int main()
     // cout<<arr[i]<<endl;//12
     // cout<<i[arr]<<endl;//12
     // cout<<*(arr+i)<<endl;//12
-    // cout<<*(i+arr)<<endl;//12 
+    // cout<<*(i+arr)<<endl;//12
 
     // int arr[10];
     // cout<<sizeof(arr)<<endl;// 4bytes*10 = 40
@@ -128,22 +143,66 @@ int main()
     // cout<<cptr<<endl;//printing till found \0 - k╗■b
 
     // char name[10] = "Shashi";
-    //cout<<name<<endl;//Shashi - good practice as temp memo to main mem by copy
+    // cout<<name<<endl;//Shashi - good practice as temp memo to main mem by copy
 
     // char*c = "Shashi";
-    //cout<<c<<endl;//Shashi - bad practice as temp stored and *c pointing to temp string may loss data
+    // cout<<c<<endl;//Shashi - bad practice as temp stored and *c pointing to temp string may loss data
 
-    //Pointer with function ---------------------------------------------------------
-    // int arr[10] = {1,2,3,4};
-    // cout<<"Size of arr inside main fx "<<sizeof(arr)<<endl;//40
-    // solve(arr);//4 @pass by ref as a pointer not array
+    // Pointer with function ---------------------------------------------------------
+    //  int arr[10] = {1,2,3,4};
+    //  cout<<"Size of arr inside main fx "<<sizeof(arr)<<endl;//40
+    //  solve(arr);//4 @pass by ref as a pointer not array
 
     // int a = 5;
     // cout<<"Addrss af a is "<<&a<<endl;//Addrss af a is 0x62febc
     // int*ptr = &a;
-    // cout<<"Address stored in ptr is : "<<ptr<<endl;//Address stored in ptr is : 0x62febc 
+    // cout<<"Address stored in ptr is : "<<ptr<<endl;//Address stored in ptr is : 0x62febc
     // cout<<"Address of ptr is : "<<&ptr<<endl;//Address of ptr is : 0x62feb8
     // update(ptr);
     // cout<<"value of a is : "<<a<<endl;//value of a is : 5
+
+    // Class 3 ------------------------------------------------------------------------------------------------
+
+    // int a = 5;
+    // int *p = &a;
+    // int **q = &p;
+
+    // cout << &a << endl;//0x62feb8
+    // cout << a << endl;//5
+    // cout << p << endl;//0x62feb8
+    // cout << &p << endl;//0x62feb4
+    // cout << *p << endl;//5
+    // cout << q << endl;//0x62feb4
+    // cout << *q << endl;//0x62feb8
+    // cout << **q << endl;//5
+
+    // int a = 5;
+    // int *p = &a;
+
+    // cout << "before" << endl;
+    // cout << a << endl;//5
+    // cout << p << endl;//0x62feb8
+    // cout<<*p<<endl;//5
+
+    // util(p);
+
+    // cout<<"after"<<endl;
+    // cout << a << endl;//6
+    // cout<<p<<endl;//0x62feb8
+    // cout<<*p<<endl;//6
+
+    // int x = 12;
+    // int * p = &x;
+    // int**q = &p;
+    // solvee(q);
+    // cout<<x<<endl;
+
+    //Pointer Pass by Val & Pass by Refrenece-----
+
+    int a = 12;
+    int* p = &a;
+    cout<<"before "<<p<<endl;//before 0x62febc
+    solveee(p);
+    cout<<"after "<<p<<endl;//after 0x62fec0 
     return 0;
 }
