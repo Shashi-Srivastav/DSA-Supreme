@@ -93,7 +93,7 @@ int main(){
 
     //cout<<slowExpo(5,4)<<endl;//625 T.C - O(b);
    
-    cout<<fastExpo(5,4)<<endl;//625  T.C - O(logB);
+    // cout<<fastExpo(5,4)<<endl;//625  T.C - O(logB);
 
 return 0;
 }
