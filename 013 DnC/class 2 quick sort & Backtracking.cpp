@@ -60,6 +60,22 @@ void quickSort(int arr[], int s, int e)
     // pivort ele -> right
     quickSort(arr, p + 1, e);
 }
+void printPermutation(string&str,int i){
+    //base case
+    if(i>=str.length()){
+        cout<<str<<" ";
+        return;
+    }
+    //swapping
+    for(int j=i;j<str.length();j++){
+        ///swap
+        swap(str[i],str[j]);
+        //rec call
+        printPermutation(str,i+1);
+        //backtracking - cause to recreate original str because its get swapped by upper code @pass by ref 
+        swap(str[i],str[j]);
+    }
+}  
 int main()
 {
     int arr[] = {8, 1, 3, 4, 20, 50, 30};
@@ -72,5 +88,11 @@ int main()
     {
         cout << i << " ";
     }
+
+
+    //BackTracking -----------------------------
+     string str = "abc";
+     int i = 0;
+     printPermutation(str,i);
     return 0;
 }
