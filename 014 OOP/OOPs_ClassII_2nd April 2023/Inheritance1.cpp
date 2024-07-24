@@ -15,12 +15,12 @@ class Animal{
             cout<<"Age = "<<age;
         }
 };
-class Dog:private Animal{ // Child Class / Derived class
+class Dog:public Animal{ // Child Class / Derived class
    
 };
 int main(){
     Dog d1;
-    // d1.eat(); // Wont work
+    d1.eat(); // Wont work
     // d1.age; // Wont work here 
     return 0;
 }
